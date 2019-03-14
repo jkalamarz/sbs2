@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D02EFD9B223A4BDE003C1509 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D02EFD96223A4ADC003C1509 /* WebKit.framework */; };
 		D0FA14BA223A21B100C4A297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA14B9223A21B100C4A297 /* AppDelegate.swift */; };
 		D0FA14BC223A21B100C4A297 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA14BB223A21B100C4A297 /* RootViewController.swift */; };
 		D0FA14BE223A21B100C4A297 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA14BD223A21B100C4A297 /* DataViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D02EFD96223A4ADC003C1509 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D0FA14B6223A21B100C4A297 /* SBS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0FA14B9223A21B100C4A297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0FA14BB223A21B100C4A297 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02EFD9B223A4BDE003C1509 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D02EFD95223A4ADC003C1509 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D02EFD96223A4ADC003C1509 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0FA14AD223A21B100C4A297 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 				D0FA14D1223A21B300C4A297 /* SBS2Tests */,
 				D0FA14DC223A21B300C4A297 /* SBS2UITests */,
 				D0FA14B7223A21B100C4A297 /* Products */,
+				D02EFD95223A4ADC003C1509 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -441,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHY46THGUV;
 				INFOPLIST_FILE = SBS2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHY46THGUV;
 				INFOPLIST_FILE = SBS2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
