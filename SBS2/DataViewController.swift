@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import WebKit
 
 class DataViewController: UIViewController {
-
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: String = ""
+    var dataUrl: String = ""
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +30,8 @@ class DataViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.dataLabel!.text = dataObject
+        let myRequest = URLRequest(url: URL(string:self.dataUrl)!)
+        self.webView.load(myRequest)
     }
 
 

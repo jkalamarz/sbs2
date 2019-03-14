@@ -20,15 +20,8 @@ import UIKit
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
-    var pageData: [String] = []
-
-
-    override init() {
-        super.init()
-        // Create the data model.
-        let dateFormatter = DateFormatter()
-        pageData = dateFormatter.monthSymbols
-    }
+    var pageData = ["Left", "HitApp", "Right"]
+    var urls = ["https://www.google.com/search?q=superbowl", "https://www.jacek.kalamarz.com/xplate.html", "https://www.bing.com/search?q=superbowl"]
 
     func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> DataViewController? {
         // Return the data view controller for the given index.
@@ -39,6 +32,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         // Create a new view controller and pass suitable data.
         let dataViewController = storyboard.instantiateViewController(withIdentifier: "DataViewController") as! DataViewController
         dataViewController.dataObject = self.pageData[index]
+        dataViewController.dataUrl = self.urls[index]
         return dataViewController
     }
 
